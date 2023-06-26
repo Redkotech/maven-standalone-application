@@ -3,27 +3,15 @@ job('mvn-project') {
   description('Builds and deploys a Maven project')
 
   scm {
-    git {
-      remote {
-        url('https://github.com/Redkotech/maven-standalone-application.git')
-        //credentials('github-credentials')
-      }
-      branch('master')
+    github ('https://github.com/Redkotech/maven-standalone-application.git', 'master')
     }
-  }
 
   triggers {
     scm('* * * * *')
   }
 
   steps {
-    maven {
-      goals('clean package')
-      //mavenInstallation('Maven 3.9.2')
-      rootPOM('pom.xml')
-      injectBuildVariables(true)
-    }
-  }
+    maven ('clean package', 'maven-standalone-application/pom.xml')
 
   publishers {
     archiveArtifacts('**/*.jar')
