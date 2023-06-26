@@ -14,7 +14,7 @@ mavenJob('mvn-project') {
   }
 
   steps {
-    goal('clean package', 'maven-standalone-application/pom.xml')
+    maven('clean package', 'maven-standalone-application/pom.xml')
   }
   publishers {
     archiveArtifacts('**/*.jar')
