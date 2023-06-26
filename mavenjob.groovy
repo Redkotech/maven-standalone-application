@@ -12,9 +12,7 @@ mavenJob('mvn-DSLProject') {
     //scm('* * * * *')
      githubPush()
   }
-
-  steps {
-    goal('clean package', 'maven-standalone-application/pom.xml')
+  goals('clean package', 'maven-standalone-application/pom.xml')
   }
   publishers {
     archiveArtifacts('**/*.jar')
