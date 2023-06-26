@@ -30,7 +30,7 @@ pipeline {
         }
         stage('staging') {
             steps {
-                 build job: 'pipeline-dsl-job'
+                 build job: 'doxa_FStyle'
             }
         }
     }
