@@ -1,5 +1,5 @@
-job('mvn-project') {
-  displayName('my maven project')
+job('mydsl-project') {
+  displayName('maven-DSL-project')
   description('Builds and deploys a Maven project')
 
   scm {
