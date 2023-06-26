@@ -14,7 +14,7 @@ mavenJob('mvn-DSLProject') {
   }
 
   steps {
-    maven('clean package', 'maven-standalone-application/pom.xml')
+    goal('clean package', 'maven-standalone-application/pom.xml')
   }
   publishers {
     archiveArtifacts('**/*.jar')
