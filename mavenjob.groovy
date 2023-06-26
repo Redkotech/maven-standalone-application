@@ -12,9 +12,8 @@ mavenJob('mvn-DSLProject') {
     //scm('* * * * *')
      githubPush()
   }
-  steps {
-     goals('clean package', 'maven-standalone-application/pom.xml')
-  }
+  goals('clean package', 'maven-standalone-application/pom.xml')
+  
   publishers {
     archiveArtifacts('**/*.jar')
     archiveJunit('**/target/surefire-reports/TEST-*.xml')
