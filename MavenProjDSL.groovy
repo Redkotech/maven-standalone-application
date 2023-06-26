@@ -19,14 +19,14 @@ job('mvn-project') {
   steps {
     maven {
       goals('clean package')
-      mavenInstallation('Maven 3.9.2')
+      //mavenInstallation('Maven 3.9.2')
       rootPOM('pom.xml')
       injectBuildVariables(true)
     }
   }
 
   publishers {
-    archiveArtifacts('**/*jar')
+    archiveArtifacts('**/*.jar')
     archiveJunit('**/target/surefire-reports/TEST-*.xml')
   }
 
