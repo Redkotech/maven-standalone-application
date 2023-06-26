@@ -30,7 +30,7 @@ pipeline {
         }
         stage('staging') {
             steps {
-                 build job: 'doxa_FStyle'
+                 build job: 'tomcat'
             }
         }
     }
