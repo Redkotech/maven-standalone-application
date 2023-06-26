@@ -1,4 +1,4 @@
-mavenJob('mvn-project') {
+mavenJob('mvnDSLProject') {
   logRotator(-1, 10)
   displayName('maven-DSL-project')
   description('Builds and deploys a Maven project')
