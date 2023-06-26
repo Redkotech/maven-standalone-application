@@ -1,4 +1,4 @@
-job('mydsl-project') {
+job('mvn-project') {
   displayName('maven-DSL-project')
   description('Builds and deploys a Maven project')
 
