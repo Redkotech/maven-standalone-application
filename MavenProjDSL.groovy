@@ -3,19 +3,19 @@ job('mvn-project') {
   description('Builds and deploys a Maven project')
 
   scm {
-    github ('https://github.com/Redkotech/maven-standalone-application.git', 'master')
-    }
+    git('https://github.com/Redkotech/maven-standalone-application.git', 'master')
+  }
 
   triggers {
     scm('* * * * *')
   }
 
   steps {
-    maven ('clean package', 'maven-standalone-application/pom.xml')
+    maven('clean package', 'maven-standalone-application/pom.xml')
 
   publishers {
-    archiveArtifacts('**/*.jar')
-    archiveJunit('**/target/surefire-reports/TEST-*.xml')
+    archiveArtifacts '**/*.jar'
+    archiveJunit '**/target/surefire-reports/TEST-*.xml'
   }
 
 /*  postBuild {
