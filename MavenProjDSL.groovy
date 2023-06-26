@@ -19,7 +19,7 @@ job('mvn-project') {
   steps {
     maven {
       goals('clean package')
-      //mavenInstallation('Maven 3.6.3')
+      mavenInstallation('Maven 3.9.2')
       rootPOM('pom.xml')
       injectBuildVariables(true)
     }
