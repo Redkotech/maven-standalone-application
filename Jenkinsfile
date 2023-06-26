@@ -28,7 +28,7 @@ pipeline {
                 }
             }
         }
-        stage('staging'){
+        stage('staging') {
             build job: 'pipeline-dsl-job'
         }
     }
